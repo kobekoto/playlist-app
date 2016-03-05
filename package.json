@@ -1,0 +1,20 @@
+{
+  "name": "playlist-app",
+  "version": "1.0.0",
+  "description": "\"Loads YouTube Playlist data\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kobe Osei-Akoto",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.10.2"
+  }
+}
