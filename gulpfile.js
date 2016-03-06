@@ -132,6 +132,7 @@ function startBrowserSync() {
 
 gulp.task('dev', function(callback) {
 	return runSequence(
+		'copy-bower-components-dev',
 		'copy-app-dev',
 		'copy-index-dev',
 		'copy-templates-dev',
