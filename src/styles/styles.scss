@@ -1,5 +1,85 @@
 body {
-	font-family: 'Arial';
-	background-color: yellow;
-
+	font-family: 'Arial';	
 }
+
+header {
+	border-bottom: 1px solid #d5d5d5;
+	width: 100%;
+	@media (min-width: 768px) {
+		padding: 0px 20px;
+	}				
+
+	h1 {
+		text-align: center;
+		@media (min-width: 768px) {
+			text-align: left;
+		}						
+	}
+}
+
+.videoInfoSection {
+	padding: 20px 0;
+	border-bottom: 1px solid #d5d5d5;
+	overflow: auto;
+	position: relative;
+
+	@media (min-width: 768px) {
+		padding: 20px 20px;
+	}				
+
+	.info {
+		@media (min-width: 321px) and (max-width: 767px) {
+			margin: 0 auto;
+			display: block;
+			width: 320px;
+			padding: 5px 0;
+		}				
+		@media (min-width: 768px) {
+			overflow: auto;
+			display: inline-block;
+			width: 31%;
+			padding-left: 15px;
+		}	
+	}
+
+	.videoName {
+		// background-color: yellow;
+	}
+
+
+	.publishDate {
+		font-size: 1.3em;
+		color: #868686;
+	}
+	
+	img {
+		display: block;
+		border: 1px solid blue;
+		width: 320px;
+		height: 180px;
+		margin: 0 auto;
+
+		@media (min-width: 768px) {
+			float: left;
+			width: 480px;
+			height: 320px;
+		}				
+	}
+
+	.thumbnail {
+		margin-top: 15px;
+		@media (min-width: 768px) {
+			float: left;
+		}				
+	}
+
+	.videoDescription {
+		display: none;
+		@media (min-width: 768px) {
+			display: inline-block;
+			width: 200px;
+		}				
+
+	}
+}
+
