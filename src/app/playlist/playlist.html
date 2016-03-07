@@ -9,7 +9,8 @@
 		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>
 		<div class="videoDescription">
 			<!-- TODO: truncate description -->
-			{{ video.snippet.description}}
+			{{ video.snippet.description | limitTo: '25'}}
+			{{ video.snippet.description.length > 25 ? '...' : ''}}
 		</div>
 	</div>
 	<div class="thumbnail">
