@@ -5,7 +5,9 @@
 		.module('app.playlist')
 		.controller('PlaylistController', PlaylistController);
 
-	function PlaylistController() {
+	PlaylistController.$inject = ['playlistService'];
+
+	function PlaylistController(playlistService) {
 		var vm = this;
 
 		vm.playlist = 'Litty';
