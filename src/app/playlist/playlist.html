@@ -3,16 +3,29 @@
 </header>
 
 <!-- Section that will be repeated -->
-<div class='videoInfoSection'>
+<div class='videoInfoSection' ng-repeat="video in vm.playlistData">
+	<div class="info">
+		<h3 class="videoName">{{ video.snippet.title }}</h3>
+		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>
+		<div class="videoDescription">
+			<!-- TODO: truncate description -->
+			{{ video.snippet.description}}
+		</div>
+	</div>
+	<div class="thumbnail">
+		<!-- Write directive logic for thumbnails for tablet -->
+		<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
+	</div>
+</div>
+<!-- <div class='videoInfoSection'>
 	<div class="info">
 		<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-		{{vm.playlist}}
 		<div class="publishDate">Published on Oct 19, 2014</div>
 		<div class="videoDescription">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		</div>
-	</div>
+	</div>	
 	<div class="thumbnail">
 		<img src=""/>
 	</div>
@@ -30,16 +43,4 @@
 		<img src=""/>
 	</div>
 </div>
-<div class='videoInfoSection'>
-	<div class="info">
-		<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-		<div class="publishDate">Published on Oct 19, 2014</div>
-		<div class="videoDescription">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		</div>
-	</div>	
-	<div class="thumbnail">
-		<img src=""/>
-	</div>
-</div>
+ -->
