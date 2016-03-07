@@ -24,7 +24,7 @@ module.exports = function() {
             ignorePath: '../'
         },
 
-        defaultPort: 8000,
+        defaultPort: 7000,
         nodeServer: 'server.js'
 
     };

@@ -1,3 +1,17 @@
-<div>
-	playlistDetail view!
+<div class="videoInfoSection">
+	<div class="info">
+		<a ui-sref="playlistDetail({index: $index, videoId: video.snippet.resourceId.videoId})">
+			<h3 class="videoName">{{ video.snippet.title }}</h3>
+		</a>
+		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>
+		<div class="videoDescription">
+			<!-- TODO: truncate description -->
+			{{ video.snippet.description | limitTo: '25'}}
+			{{ video.snippet.description.length > 25 ? '...' : ''}}
+		</div>
+	</div>
+	<div class="thumbnail">
+		<!-- Write directive logic for thumbnails for tablet -->
+		<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
+	</div>
 </div>

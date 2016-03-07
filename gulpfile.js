@@ -106,11 +106,10 @@ function startBrowserSync() {
 
 	var options = {
 		proxy: 'localhost:' + port,
-		port: 7000,
+		// port: 7000,
 		files: [
 			config.publicFolder + '**/*.*',
-			config.publicStyles + 'styles.css',
-			config.endpoints + '**/*.*'
+			config.publicStyles + 'styles.css'
 		],
 		ghostMode: {
 			clicks: true,
