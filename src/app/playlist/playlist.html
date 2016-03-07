@@ -5,7 +5,7 @@
 <!-- Section that will be repeated -->
 <div class='videoInfoSection' ng-repeat="video in vm.playlistData">
 	<div class="info">
-		<a ui-sref="playlistDetail({index: $index, videoId: video.snippet.resourceId.videoId})">
+		<a ui-sref="videoDetail({id: video.id})">
 			<h3 class="videoName">{{ video.snippet.title }}</h3>
 		</a>
 		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>

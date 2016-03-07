@@ -15,15 +15,11 @@
 					controller: 'PlaylistController',
 					controllerAs: 'vm'
 				})
-				.state('playlistDetail', {
-					url: '/{videoId}',
-					templateUrl: 'app/playlist/playlistDetail.html',
-					controller: 'PlaylistDetailController',
-					controllerAs: 'vm',
-					params: {
-						videoId: null,
-						index: null
-					}
+				.state('videoDetail', {
+					url: '/{id}',
+					templateUrl: 'app/playlist/videoDetail.html',
+					controller: 'videoDetailController',
+					controllerAs: 'vm'
 				});
 		}
 })();

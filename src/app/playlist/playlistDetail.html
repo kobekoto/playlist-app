@@ -1,17 +1,19 @@
-<div class="videoInfoSection">
-	<div class="info">
-		<a ui-sref="playlistDetail({index: $index, videoId: video.snippet.resourceId.videoId})">
-			<h3 class="videoName">{{ video.snippet.title }}</h3>
-		</a>
-		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>
-		<div class="videoDescription">
-			<!-- TODO: truncate description -->
-			{{ video.snippet.description | limitTo: '25'}}
-			{{ video.snippet.description.length > 25 ? '...' : ''}}
+<div ng-show="!vm.invalidId">
+	<div class="videoInfoSection">
+		<div class="info">
+				<h3 class="videoName">{{vm.video.snippet.title}}</h3>
+			<div class="publishDate"> Published on {{ vm.video.snippet.publishedAt | date: 'mediumDate'}}</div>
+			<div class="videoDescription">
+				{{ vm.video.snippet.description | limitTo: '25'}}
+				{{ vm.video.snippet.description.length > 25 ? '...' : ''}}
+			</div>
+		</div>
+		<div class="thumbnail">
+			<div id="player"></div>
 		</div>
 	</div>
-	<div class="thumbnail">
-		<!-- Write directive logic for thumbnails for tablet -->
-		<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
-	</div>
 </div>
+<div ng-show="vm.invalidId">
+   Video info could not be loaded
+</div>
+
