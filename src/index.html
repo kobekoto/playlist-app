@@ -1,58 +1,25 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Playlist App</title>
 	</head>
 	<body>
-		<header class="header">
-			<h1>My YouTube Playlist</h1>
-		</header>
-
-		<!-- Section that will be repeated -->
-		<div class='videoInfoSection'>
-			<div class="info">
-				<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-				<div class="publishDate">Published on Oct 19, 2014</div>
-				<div class="videoDescription">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				</div>
-			</div>
-			<div class="thumbnail">
-				<img src=""/>
-			</div>
-		</div>
-		<div class='videoInfoSection'>
-			<div class="info">
-				<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-				<div class="publishDate">Published on Oct 19, 2014</div>
-				<div class="videoDescription">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				</div>
-			</div>	
-			<div class="thumbnail">
-				<img src=""/>
-			</div>
-		</div>
-		<div class='videoInfoSection'>
-			<div class="info">
-				<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-				<div class="publishDate">Published on Oct 19, 2014</div>
-				<div class="videoDescription">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				</div>
-			</div>	
-			<div class="thumbnail">
-				<img src=""/>
-			</div>
-		</div>
 		
+		<div ui-view></div>
 		
-
 		<script src='vendor/angular/angular.min.js'></script>
+		<script src='vendor/angular-ui-router/release/angular-ui-router.min.js'></script>
+
+		<!-- main app module -->
+		<script src="app/app.module.js"></script>
+
+		<!-- playlist module -->
+		<script src="app/playlist/playlist.module.js"></script>
+		<script src="app/playlist/config.route.js"></script>
+
+
 	</body>
 </html>
