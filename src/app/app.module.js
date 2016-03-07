@@ -5,6 +5,7 @@
 		.module('app', [
 			'ui.router',
 			// custom modules
-			'app.playlist'
+			'app.playlist',
+			'app.shared'
 		]);
 })();

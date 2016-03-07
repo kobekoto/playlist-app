@@ -11,7 +11,9 @@
 			$stateProvider
 				.state('/playlist', {
 					url: '/',
-					templateUrl: 'app/playlist/playlist.html'
+					templateUrl: 'app/playlist/playlist.html',
+					controller: 'PlaylistController',
+					controllerAs: 'vm'
 				});
 		}
 })();
