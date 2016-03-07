@@ -9,7 +9,6 @@
 
 	function PlaylistController(playlistService) {
 		var vm = this;
-		vm.playlistData;
 
 		playlistService.getPlaylistInfo()
 			.then(function(data) {
@@ -20,8 +19,6 @@
 			.catch(function(error) {
 				console.log(error);
 			});
-
-		vm.playlist = 'Litty';
 	}
 
 })();

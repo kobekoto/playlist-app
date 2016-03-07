@@ -5,7 +5,9 @@
 <!-- Section that will be repeated -->
 <div class='videoInfoSection' ng-repeat="video in vm.playlistData">
 	<div class="info">
-		<h3 class="videoName">{{ video.snippet.title }}</h3>
+		<a ui-sref="playlistDetail({index: $index, videoId: video.snippet.resourceId.videoId})">
+			<h3 class="videoName">{{ video.snippet.title }}</h3>
+		</a>
 		<div class="publishDate"> Published on {{ video.snippet.publishedAt | date: 'mediumDate'}}</div>
 		<div class="videoDescription">
 			<!-- TODO: truncate description -->
@@ -18,30 +20,3 @@
 		<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
 	</div>
 </div>
-<!-- <div class='videoInfoSection'>
-	<div class="info">
-		<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-		<div class="publishDate">Published on Oct 19, 2014</div>
-		<div class="videoDescription">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		</div>
-	</div>	
-	<div class="thumbnail">
-		<img src=""/>
-	</div>
-</div>
-<div class='videoInfoSection'>
-	<div class="info">
-		<h3 class="videoName">Video name lorem ipsum eos dolor</h3>
-		<div class="publishDate">Published on Oct 19, 2014</div>
-		<div class="videoDescription">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		</div>
-	</div>	
-	<div class="thumbnail">
-		<img src=""/>
-	</div>
-</div>
- -->
