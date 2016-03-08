@@ -1,14 +1,14 @@
 <div ng-show="!vm.invalidId">
-	<div class="videoInfoSection">
+	<div class="videoInfoSection detailPage">
 		<div class="info">
 				<h3 class="videoName">{{vm.video.snippet.title}}</h3>
 			<div class="publishDate"> Published on {{ vm.video.snippet.publishedAt | date: 'mediumDate'}}</div>
 			<div class="videoDescription">
-				{{ vm.video.snippet.description | limitTo: '25'}}
-				{{ vm.video.snippet.description.length > 25 ? '...' : ''}}
+				{{ vm.video.snippet.description }}
 			</div>
 		</div>
 		<div class="thumbnail">
+			<you-tube-player width="640" height="390" videoId="X0qwQqwKLlM"></you-tube-player>
 			<div id="player"></div>
 		</div>
 	</div>

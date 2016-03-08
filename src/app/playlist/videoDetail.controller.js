@@ -3,11 +3,11 @@
 
     angular
         .module('app.playlist')
-        .controller('PlaylistDetailController', PlaylistDetailController);
+        .controller('videoDetailController', videoDetailController);
 
-    PlaylistDetailController.$inject = ['playlistService', '$stateParams'];
+    videoDetailController.$inject = ['playlistService', '$stateParams'];
 
-    function PlaylistDetailController(playlistService, $stateParams) {
+    function videoDetailController(playlistService, $stateParams) {
 
         var vm = this;
 
