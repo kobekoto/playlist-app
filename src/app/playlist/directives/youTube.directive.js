@@ -2,23 +2,29 @@
 	'use strict';
 
 	angular
-		.module('app.playlist')
-		.directive('youtube', youTubePlayer);
+		.module("app.playlist")
+		.directive("customYoutube", youTubePlayer);
 
-		console.log('hey!');
+	youTubePlayer.$inject = ['$window', "$sce"];
 
-	youTubePlayer.$inject = ['$window'];	
-
-	function youTubePlayer($window) {
+	function youTubePlayer($window, $sce) {
 		return {
-			templateUrl: 'app/playlist/directives/youTubePlayer.html',
-			restrict: 'E'
-			
-		};
-	}
+			restrict: "AE",
+			template: "<div style='height:200px;'>
+			<iframe style='height:100%;width:100%;' src='{{url}}'></iframe></div>",
+			scope: {
+				vid: "="
+			},
+			link: function(scope, element, attrs) {
+				console.log(scope, "before");
+				scope.$watch("vid", function(new_val) {
+					console.log(scope, "after");
+					console.log(new_val);
+					scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + new_val);
+				});
+			}
 
-	function youTubeController() {
-		var vm = this;
+		}
 	}
 
 

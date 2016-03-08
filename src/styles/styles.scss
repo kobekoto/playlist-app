@@ -73,12 +73,14 @@ header {
 			display: inline-block;
 			width: 200px;
 		}				
-
 	}
 }
 
 .detailPage {
+	position: static;
 	.videoDescription {
 		display: block;
+		position: absolute;
+		bottom: 0;
 	}
 }
