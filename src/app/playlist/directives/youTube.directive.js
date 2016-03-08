@@ -10,8 +10,7 @@
 	function youTubePlayer($window, $sce) {
 		return {
 			restrict: "AE",
-			template: "<div style='height:200px;'>
-			<iframe style='height:100%;width:100%;' src='{{url}}'></iframe></div>",
+			template: "<div style='height:200px;'><iframe style='height:100%;width:100%;' src='{{url}}'></iframe></div>",
 			scope: {
 				vid: "="
 			},
@@ -20,6 +19,7 @@
 				scope.$watch("vid", function(new_val) {
 					console.log(scope, "after");
 					console.log(new_val);
+					// http://stackoverflow.com/questions/21292114/external-resource-not-being-loaded-by-angularjs
 					scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + new_val);
 				});
 			}

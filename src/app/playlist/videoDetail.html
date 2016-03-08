@@ -1,11 +1,17 @@
+<a ui-sref="playlist" class="playlistPageLink">
+	<span>&lsaquo; Back to list of videos</span>
+</a>
+
 <div ng-show="!vm.invalidId">
 	<div class="videoInfoSection detailPage">
-		<div class="info">
-				<h3 class="videoName">{{vm.video.snippet.title}}</h3>
+		<div class="info" ng-cloak>
+			<h3 class="videoName">{{vm.video.snippet.title}}</h3>
 			<div class="publishDate"> Published on {{ vm.video.snippet.publishedAt | date: 'mediumDate'}}</div>
-			<div class="videoDescription">
+			<div ng-cloak class="videoDescription">
 				{{ vm.video.snippet.description }}
 			</div>
+			<span ng-cloak ng-hide="vm.video.snippet.description" class='videoDescription'>No description available</span>
+			
 		</div>
 		<div class="thumbnail">
 			<div custom-youtube width="640" height="390" vid="vm.video.snippet.resourceId.videoId"></div custom-youtube>

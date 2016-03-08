@@ -15,8 +15,10 @@
 			{{ video.snippet.description.length > 25 ? '...' : ''}}
 		</div>
 	</div>
-	<div class="thumbnail">
-		<!-- Write directive logic for thumbnails for tablet -->
-		<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
-	</div>
+	<a ui-sref="videoDetail({id: video.id})">
+		<div class="thumbnail">
+			<!-- Write directive logic for thumbnails for tablet -->
+			<img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
+		</div>
+	</a>
 </div>

@@ -78,9 +78,21 @@ header {
 
 .detailPage {
 	position: static;
+	padding: 10px 10px;
+	border-bottom: none;
+
+	.publishDate {
+		font-size: 1em;
+	}
 	.videoDescription {
 		display: block;
 		position: absolute;
-		bottom: 0;
+		top: 370px;
 	}
+}
+
+.playlistPageLink {
+	display: block;
+	margin-top: 20px;
+	margin-left: 10px;
 }
